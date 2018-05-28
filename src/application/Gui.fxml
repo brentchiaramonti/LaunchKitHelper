@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.web.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="562.0" prefWidth="563.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.GuiController">
+   <children>
+      <TabPane prefHeight="548.0" prefWidth="1249.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab id="WelcomeTab" text="Welcome Statement">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Button id="ConvertButton" fx:id="convertButton" layoutX="585.0" layoutY="468.0" mnemonicParsing="false" onAction="#convert" text="Convert" />
+                        <HTMLEditor id="WelcomeInput" fx:id="welcomeInput" htmlText="&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body contenteditable=&quot;true&quot;&gt;&lt;/body&gt;&lt;/html&gt;" layoutX="14.0" layoutY="25.0" prefHeight="411.0" prefWidth="600.0" />
+                        <HTMLEditor id="WelcomeOutput" fx:id="welcomeOutput" htmlText="&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body contenteditable=&quot;true&quot;&gt;&lt;/body&gt;&lt;/html&gt;" layoutX="643.0" layoutY="23.0" prefHeight="412.0" prefWidth="600.0" />
+                        <Label layoutX="307.0" layoutY="6.0" prefHeight="17.0" prefWidth="51.0" text="Input" />
+                        <Label layoutX="898.0" layoutY="6.0" prefHeight="17.0" prefWidth="45.0" text="Output" />
+                        <TextField fx:id="welcomeDomain" layoutX="125.0" layoutY="481.0" />
+                        <Label layoutX="155.0" layoutY="460.0" text="Domain Number" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab id="ServicesTab" text="Services">
+            <content>
+              <AnchorPane fx:id="servicesTab" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <HTMLEditor id="ServicesOutput" fx:id="linkOutput" htmlText="&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body contenteditable=&quot;true&quot;&gt;&lt;/body&gt;&lt;/html&gt;" layoutX="625.0" layoutY="15.0" prefHeight="489.0" prefWidth="603.0" />
+                        <Button id="ServicesButton" layoutX="262.0" layoutY="480.0" mnemonicParsing="false" onAction="#generateLinks" text="Generate Links" />
+                        <TextField fx:id="linkDomain" layoutX="356.0" layoutY="45.0" />
+                        <Label layoutX="383.0" layoutY="20.0" prefHeight="17.0" prefWidth="96.0" text="Domain Number" />
+                        <Button layoutX="36.0" layoutY="480.0" mnemonicParsing="false" onAction="#reset" text="Reset" />
+                        <Button layoutX="91.0" layoutY="480.0" mnemonicParsing="false" onAction="#all" text="All" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>
