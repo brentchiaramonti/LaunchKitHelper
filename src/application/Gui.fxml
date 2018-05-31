@@ -35,6 +35,7 @@
                         <Label layoutX="383.0" layoutY="20.0" prefHeight="17.0" prefWidth="96.0" text="Domain Number" />
                         <Button layoutX="36.0" layoutY="480.0" mnemonicParsing="false" onAction="#reset" text="Reset" />
                         <Button layoutX="91.0" layoutY="480.0" mnemonicParsing="false" onAction="#all" text="All" />
+                        <CheckBox fx:id="extraText" layoutX="387.0" layoutY="484.0" mnemonicParsing="false" text="Add extra text (Only for some) " />
                      </children>
                   </AnchorPane>
             </content>

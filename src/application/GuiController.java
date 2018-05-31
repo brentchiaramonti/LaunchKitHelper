@@ -37,6 +37,9 @@ public class GuiController {
 	CheckBox[] c;
 	
 	@FXML
+	CheckBox extraText;
+	
+	@FXML
 	AnchorPane servicesTab;
 	
 	
@@ -110,10 +113,23 @@ public class GuiController {
 		checks[20] = c[20].isSelected();
 		checks[21] = c[21].isSelected();
 		checks[22] = c[22].isSelected();
+		String output;
 		
-		String domain = linkDomain.getText();
+		if(linkDomain.getText().equals("")) {
+			if(extraText.isSelected()) {
+				output = BackEnd.generateListExtra(checks);
+			} else {
+				output = BackEnd.generateList(checks);
+			}
+		} else {
 		
-		String output = BackEnd.generateLink(domain, checks);
+			String domain = linkDomain.getText();
+			if(extraText.isSelected()) {
+				output = BackEnd.generateLinkExtra(domain, checks);
+			} else {
+				output = BackEnd.generateLink(domain, checks);
+			}
+		}
 		
 		linkOutput.setHtmlText(output);
 	}
