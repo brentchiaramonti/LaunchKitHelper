@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Test</title>
+
+<script>
+function myFunction() {
+	var output = document.getElementById("demo");
+	demo.innerHTML = "";
+	if(document.getElementById("c1").checked){
+		demo.innerHTML = demo.innerHTML + "&lt;a href=\"/articles/dear_doctor/509262-cosmetic-tooth-bonding\"data-source-type=\"external-link\">Bonding&lt;/a><br>";
+	} 
+	if(document.getElementById("c2").checked){
+		demo.innerHTML = demo.innerHTML + "Second one <br>";
+	} 
+	if(document.getElementById("c3").checked){
+		demo.innerHTML = demo.innerHTML + "Third one <br>";
+	} 
+    
+}
+</script>
+</head>
+<body>
+
+
+
+  <input type="checkbox" id="c1">Bonding<br>
+  <input type="checkbox" id="c2">Cosmetic Contouring<br>
+  <input type="checkbox" id="c3">Cosmetic Fillings<br>
+  <input type="checkbox" id="c4">Dentures<br>
+  <input type="checkbox" id="c5">Extractions<br>
+  <input type="checkbox" id="c6">Bone Grafts<br>
+  <input type="checkbox" id="c7">Gum Grafts<br>
+  <input type="checkbox" id="c8">Jaw/TMJ<br>
+  <input type="checkbox" id="c9">Root Canal Therapy<br>
+  <input type="checkbox" id="c10">Sealants<br>
+  <input type="checkbox" id="c11">Veneers<br>
+  <input type="checkbox" id="c12">Braces<br>
+  <input type="checkbox" id="c13">Cosmetic Dentistry<br>
+  <input type="checkbox" id="c14">Crowns and Bridges<br>
+  <input type="checkbox" id="c15">Excessive or Uneven Gums<br>
+  <input type="checkbox" id="c16">Flap Surgery<br>
+  <input type="checkbox" id="c17">Implants<br>
+  <input type="checkbox" id="c18">Maxillofacial Surgery<br>
+  <input type="checkbox" id="c19">Scaling and Root Planing<br>
+  <input type="checkbox" id="c20">Speciality Dentures<br>
+  <input type="checkbox" id="c21">Teeth Whitening<br>
+  <input type="checkbox" id="c22">Invisalign for Teens<br>
+  <input type="checkbox" id="c23">Invisalign for Adults<br>
+
+<button type="button" onclick="myFunction()">Try it</button>
+
+<pre id="demo"></pre>
+</body>
+</html>
