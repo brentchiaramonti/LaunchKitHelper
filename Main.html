@@ -6,25 +6,57 @@
 
 <script>
 function myFunction() {
-	var output = document.getElementById("demo");
-	demo.innerHTML = "";
+	var output = document.getElementById("dentistDisplay");
+	output.innerHTML = "";
+  output.innerHTML += "&lt;ul><br>"
 	if(document.getElementById("c1").checked){
-		demo.innerHTML = demo.innerHTML + "&lt;a href=\"/articles/dear_doctor/509262-cosmetic-tooth-bonding\"data-source-type=\"external-link\">Bonding&lt;/a><br>";
+		output.innerHTML = output.innerHTML + "&lt;li>&lt;a href=\"/articles/dear_doctor/509262-cosmetic-tooth-bonding\"data-source-type=\"external-link\">Bonding&lt;/a>&lt;li><br>";
 	} 
 	if(document.getElementById("c2").checked){
-		demo.innerHTML = demo.innerHTML + "Second one <br>";
+		output.innerHTML = output.innerHTML + "Second one <br>";
 	} 
 	if(document.getElementById("c3").checked){
-		demo.innerHTML = demo.innerHTML + "Third one <br>";
+		output.innerHTML = output.innerHTML + "Third one <br>";
 	} 
+  output.innerHTML += "&lt;/ul>"
     
+}
+function displayDentist(){
+  dentistButton.style.color = "red";
+  dermButton.style.color = "black";
+  pedButton.style.color = "black";
+
+  dentist.style.display = "block";
+  derm.style.display = "none";
+  ped.style.display="none";
+}
+function displayDerm(){
+  dentistButton.style.color = "black";
+  dermButton.style.color = "red";
+  pedButton.style.color = "black";
+
+  dentist.style.display="none";
+  derm.style.display = "block";
+  ped.style.display="none";
+}
+function displayPed(){
+  dentistButton.style.color = "black";
+  dermButton.style.color = "black";
+  pedButton.style.color = "red";
+
+  dentist.style.display="none";
+  derm.style.display = "none";
+  ped.style.display="block";
 }
 </script>
 </head>
 <body>
 
+<button type ="button" id="dentistButton" onclick="displayDentist()" style="color:red;">Dentist</button>
+<button type ="button" id="dermButton" onclick="displayDerm()" style="color:black">Dermatologist</button>
+<button type ="button" id="pedButton" onclick="displayPed()" style="color:black">Pediatrist</button>
 
-
+<div id="dentist">
   <input type="checkbox" id="c1">Bonding<br>
   <input type="checkbox" id="c2">Cosmetic Contouring<br>
   <input type="checkbox" id="c3">Cosmetic Fillings<br>
@@ -49,8 +81,16 @@ function myFunction() {
   <input type="checkbox" id="c22">Invisalign for Teens<br>
   <input type="checkbox" id="c23">Invisalign for Adults<br>
 
-<button type="button" onclick="myFunction()">Try it</button>
+  <button type="button" onclick="myFunction()">Try it</button>
+  <pre id="dentistDisplay"></pre>
+</div>
 
-<pre id="demo"></pre>
+<div id="derm" style="display:none;">
+  <p>This will be derm eventually</p>
+</div>
+<div id="ped" style="display:none;">
+  <p>This will be pediatrist eventually</p>
+</div>
+
 </body>
 </html>
