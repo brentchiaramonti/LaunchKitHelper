@@ -5,83 +5,330 @@
 <title>Test</title>
 
 <script>
-function myFunction() {
+
+function reset() {
+  dentistButton.style.color = "black";
+  dermButton.style.color = "black";
+  pedButton.style.color = "black";
+
+  dentist.style.display = "none";
+  derm.style.display = "none";
+  ped.style.display="none";
+}
+
+function dentistLinks() {
 	var output = document.getElementById("dentistDisplay");
-	output.innerHTML = "";
-  output.innerHTML += "&lt;ul><br>"
-	if(document.getElementById("c1").checked){
-		output.innerHTML = output.innerHTML + "&lt;li>&lt;a href=\"/articles/dear_doctor/509262-cosmetic-tooth-bonding\"data-source-type=\"external-link\">Bonding&lt;/a>&lt;li><br>";
-	} 
-	if(document.getElementById("c2").checked){
-		output.innerHTML = output.innerHTML + "Second one <br>";
-	} 
-	if(document.getElementById("c3").checked){
-		output.innerHTML = output.innerHTML + "Third one <br>";
-	} 
+	output.innerHTML = "&lt;ul><br>";
+  
+  if(!document.getElementById("dCheck").checked){
+    if(document.getElementById("d1").checked){
+      output.innerHTML = output.innerHTML + "&lt;li>&lt;a href=\"articles/general/502371-bonding\">Bonding&lt;/a>&lt;/li><br>";
+    }
+    if(document.getElementById("d2").checked){
+      output.innerHTML = output.innerHTML + "&lt;li>Cosmetic Contouring&lt;/li><br>";
+    }
+    if(document.getElementById("d3").checked){
+      output.innerHTML = output.innerHTML + "&lt;li>&lt;a href=\"articles/general/502392-fillings\">Fillings&lt;/a>&lt;/li><br>";
+    }
+    if(document.getElementById("d4").checked){
+      output.innerHTML = output.innerHTML + "&lt;li>&lt;a href=\"articles/general/502386-dentures\">Dentures&lt;/a>&lt;/li><br>";
+    }
+    if(document.getElementById("d5").checked){
+      output.innerHTML = output.innerHTML + "&lt;li>&lt;a href=\"articles/general/502391-extractions\">Extractions&lt;/a>&lt;/li><br>";
+    }
+    if(document.getElementById("d6").checked){
+      output.innerHTML = output.innerHTML + "&lt;li>&lt;a href=\"articles/general/502400-grafts\">Grafts&lt;/a>&lt;/li><br>"
+    }
+    if(document.getElementById("d7").checked){
+      output.innerHTML = output.innerHTML + "&lt;li>&lt;a href=\"articles/general/502407-jaw-tmj\">Jaw/TMJ&lt;/a>&lt;/a>&lt;/li><br>"
+    }
+    if(document.getElementById("d8").checked){
+      output.innerHTML = output.innerHTML + "&lt;li>&lt;a href=\"articles/general/502432-root-canal-therapy\">Root Canal Therapy&lt;/a>&lt;/li><br>"
+    }
+    if(document.getElementById("d9").checked){
+      output.innerHTML = output.innerHTML + "&lt;li>&lt;a href=\"articles/general/502434-sealants\">Sealants&lt;/a>&lt;/li><br>"
+    }
+    if(document.getElementById("d10").checked){
+      output.innerHTML = output.innerHTML + "&lt;li>&lt;a href=\"articles/general/502446-veneers\">Veneers&lt;/a>&lt;/li><br>"
+    }
+    if(document.getElementById("d11").checked){
+      output.innerHTML = output.innerHTML + "&lt;li>&lt;a href=\"articles/general/502372-braces-orthodontia\">Braces (Orthodontia)&lt;/a>&lt;/li><br>"
+    }
+    if(document.getElementById("d12").checked){
+      output.innerHTML = output.innerHTML + "&lt;li>&lt;a href=\"articles/general/502380-cosmetic-dentistry\">Cosmetic Dentistry&lt;/a>&lt;/li><br>"
+    }
+    if(document.getElementById("d13").checked){
+      output.innerHTML = output.innerHTML + "&lt;li>&lt;a href=\"articles/general/502382-crowns-and-bridges\">Crowns and Bridges&lt;/a>&lt;/li><br>"
+    }
+    if(document.getElementById("d14").checked){
+      output.innerHTML = output.innerHTML + "&lt;li>&lt;a href=\"articles/general/502390-excessive-or-uneven-gums\">Excessive or Uneven Gums&lt;/a>&lt;/li><br>"
+    }
+    if(document.getElementById("d15").checked){
+      output.innerHTML = output.innerHTML + "&lt;li>&lt;a href=\"articles/general/502393-flap-surgery\">Flap Surgery&lt;/a>&lt;/li><br>"
+    }
+    if(document.getElementById("d16").checked){
+      output.innerHTML = output.innerHTML + "&lt;li>&lt;a href=\"articles/general/502402-implants\">Implants&lt;/a>&lt;/li><br>"
+    }
+    if(document.getElementById("d17").checked){
+      output.innerHTML = output.innerHTML + "&lt;li>&lt;a href=\"articles/general/502412-maxillofacial-surgery\">Maxillofacial Surgery&lt;/a>&lt;/li><br>"
+    }
+    if(document.getElementById("d18").checked){
+      output.innerHTML = output.innerHTML + "&lt;li>&lt;a href=\"articles/general/502433-scaling-and-root-planing\">Scaling and Root Planing&lt;/a>&lt;/li><br>"
+    }
+    if(document.getElementById("d19").checked){
+      output.innerHTML = output.innerHTML + "&lt;li>&lt;a href=\"articles/general/502386-dentures\">Dentures&lt;/a>&lt;/li><br>"
+    }
+    if(document.getElementById("d20").checked){
+      output.innerHTML = output.innerHTML + "&lt;li>&lt;a href=\"articles/general/502439-teeth-whitening\">Teeth Whitening&lt;/a>&lt;/li><br>"
+    }
+    if(document.getElementById("d21").checked){
+      output.innerHTML = output.innerHTML + "&lt;li>&lt;a href=\"articles/general/502405-invisalign-reg\">Invisalign&amp;reg;&lt;/a>&lt;/li><br>"
+    }
+    if(document.getElementById("d22").checked){
+      output.innerHTML = output.innerHTML + "&lt;li>&lt;a href=\"articles/general/502420-oral-cancer\">Oral Cancer&lt;/a>&lt;/li><br>"
+    }
+  } 
+  
+  if(document.getElementById("dCheck").checked){
+  	if(document.getElementById("d1").checked){
+  		output.innerHTML = output.innerHTML + "&lt;li>&lt;a href=\"articles/dear_doctor/509262-cosmetic-tooth-bonding\">Bonding&lt;/a>&lt;/li><br>";
+  	} 
+    
+    if(document.getElementById("d2").checked){
+      output.innerHTML = output.innerHTML + "&lt;li>&lt;a href=\"articles/dear_doctor/509356-tooth-contouring-reshaping\">Tooth Contouring &amp; Reshaping&lt;/a>&lt;/li><br>";
+    } 
+    if(document.getElementById("d3").checked){
+      output.innerHTML = output.innerHTML + "&lt;li>&lt;a href=\"articles/dear_doctor/509277-fillings\">Fillings&lt;/a>&lt;/li><br>";
+    } 
+    if(document.getElementById("d4").checked){
+      output.innerHTML = output.innerHTML + "&lt;li>&lt;a href=\"articles/dear_doctor/509333-removable-dentures\">Removable Dentures&lt;/a>&lt;/li><br>";
+    } 
+    if(document.getElementById("d5").checked){
+      output.innerHTML = output.innerHTML + "&lt;li>&lt;a href=\"articles/dear_doctor/509275-extractions\">Extractions&lt;/a>&lt;/li><br>";
+    } 
+    if(document.getElementById("d6").checked){
+      output.innerHTML = output.innerHTML + "&lt;li>&lt;a href=\"articles/dear_doctor/509282-gum-grafting\">Gum Grafting&lt;/a>&lt;/li><br>";
+      output.innerHTML = output.innerHTML + "&lt;li>&lt;a href=\"articles/dear_doctor/509254-bone-grafting\">Bone Grafting&lt;/a>&lt;/li><br>";
+    } 
+    if(document.getElementById("d7").checked){
+      output.innerHTML = output.innerHTML + "&lt;li>&lt;a href=\"articles/dear_doctor/509259-corrective-jaw-orthognathic-surgery\">Corrective Jaw (Orthognathic) Surgery&lt;/a>&lt;/li><br>";
+    } 
+    if(document.getElementById("d8").checked){
+      output.innerHTML = output.innerHTML + "&lt;li>&lt;a href=\"articles/dear_doctor/509336-root-canal-treatment\">Root Canal Treatment&lt;/a>&lt;/li><br>";
+    } 
+    if(document.getElementById("d9").checked){
+      output.innerHTML = output.innerHTML + "&lt;li>&lt;a href=\"articles/dear_doctor/509340-sealants\">Sealants&lt;/a>&lt;/li><br>";
+    } 
+    if(document.getElementById("d10").checked){
+      output.innerHTML = output.innerHTML + "&lt;li>&lt;a href=\"articles/dear_doctor/509326-porcelain-veneers\">Porcelain Veneers&lt;/a>&lt;/li><br>";
+    } 
+    if(document.getElementById("d11").checked){
+      output.innerHTML = output.innerHTML + "&lt;li>&lt;a href=\"articles/dear_doctor/509365-types-of-braces\">Types of Braces&lt;/a>&lt;/li><br>";
+    } 
+    if(document.getElementById("d12").checked){
+      output.innerHTML = output.innerHTML + "&lt;li>&lt;a href=\"articles/dear_doctor/509260-cosmetic-general-dentistry\">Cosmetic & General Dentistry&lt;/a>&lt;/li><br>";
+    } 
+    if(document.getElementById("d13").checked){
+      output.innerHTML = output.innerHTML + "&lt;li>&lt;a href=\"articles/dear_doctor/509264-crowns-bridgework\">Crowns & Bridgework&lt;/a>&lt;/li><br>";
+    } 
+    if(document.getElementById("d14").checked){
+      output.innerHTML = output.innerHTML + "&lt;li>&lt;a href=\"articles/dear_doctor/509325-periodontal-therapy\">Periodontal Therapy&lt;/a>&lt;/li><br>";
+    } 
+    if(document.getElementById("d15").checked){
+      output.innerHTML = output.innerHTML + "&lt;li>&lt;a href=\"articles/dear_doctor/509324-periodontal-flap-surgery\">Periodontal Flap Surgery&lt;/a>&lt;/li><br>";
+    } 
+    if(document.getElementById("d16").checked){
+      output.innerHTML = output.innerHTML + "&lt;li>&lt;a href=\"articles/dear_doctor/509265-dental-implants-faqs\">Dental Implants&lt;/a>&lt;/li><br>";
+    } 
+    if(document.getElementById("d17").checked){
+      output.innerHTML = output.innerHTML + "&lt;li>&lt;a href=\"articles/general/502412-maxillofacial-surgery\">Maxillofacial Surgery&lt;/a>&lt;/li><br>";
+    } 
+    if(document.getElementById("d18").checked){
+      output.innerHTML = output.innerHTML + "&lt;li>&lt;a href=\"articles/general/502433-scaling-and-root-planing\">Scaling and Root Planing&lt;/a>&lt;/li><br>";
+    } 
+    if(document.getElementById("d19").checked){
+      output.innerHTML = output.innerHTML + "&lt;li>&lt;a href=\"articles/dear_doctor/509278-fixed-dentures\">Fixed Dentures&lt;/a>&lt;/li><br>";
+    } 
+    if(document.getElementById("d20").checked){
+      output.innerHTML = output.innerHTML + "&lt;li>&lt;a href=\"articles/dear_doctor/509349-teeth-whitening\">Teeth Whitening&lt;/a>&lt;/li><br>";
+    } 
+    if(document.getElementById("d21").checked){
+      output.innerHTML = output.innerHTML + "&lt;li>&lt;a href=\"articles/dear_doctor/509294-invisalign-for-teens\">Invisalign For Teens&lt;/a>&lt;/li><br>";
+      output.innerHTML = output.innerHTML + "&lt;li>&lt;a href=\"articles/dear_doctor/509293-invisalign-for-adults\">Invisalign for Adults&lt;/a>&lt;/li><br>";
+    } 
+    if(document.getElementById("d22").checked){
+      output.innerHTML = output.innerHTML + "&lt;li>&lt;a href=\"articles/dear_doctor/509307-oral-cancer-screening\">Oral Cancer Screening&lt;/a>&lt;/li><br>";
+    } 
+  }
+
   output.innerHTML += "&lt;/ul>"
     
 }
-function displayDentist(){
-  dentistButton.style.color = "red";
-  dermButton.style.color = "black";
-  pedButton.style.color = "black";
 
-  dentist.style.display = "block";
-  derm.style.display = "none";
-  ped.style.display="none";
+function checkAllDentist(){
+  d1.checked = true;
+  d2.checked = true;
+  d3.checked = true;
+  d4.checked = true;
+  d5.checked = true;
+  d6.checked = true;
+  d7.checked = true;
+  d8.checked = true;
+  d9.checked = true;
+  d10.checked = true;
+  d11.checked = true;
+  d12.checked = true;
+  d13.checked = true;
+  d14.checked = true;
+  d15.checked = true;
+  d16.checked = true;
+  d17.checked = true;
+  d18.checked = true;
+  d19.checked = true;
+  d20.checked = true;
+  
 }
-function displayDerm(){
-  dentistButton.style.color = "black";
-  dermButton.style.color = "red";
-  pedButton.style.color = "black";
+function checkNoneDentist(){
+  d1.checked = false;
+  d2.checked = false;
+  d3.checked = false;
+  d4.checked = false;
+  d5.checked = false;
+  d6.checked = false;
+  d7.checked = false;
+  d8.checked = false;
+  d9.checked = false;
+  d10.checked = false;
+  d11.checked = false;
+  d12.checked = false;
+  d13.checked = false;
+  d14.checked = false;
+  d15.checked = false;
+  d16.checked = false;
+  d17.checked = false;
+  d18.checked = false;
+  d19.checked = false;
+  d20.checked = false;
+  
+}
 
-  dentist.style.display="none";
+function displayDentist(){
+  reset();
+  dentistButton.style.color = "red";
+  dentist.style.display = "block";
+}
+
+function pedLinks(){
+  var output = document.getElementById("pedDisplay");
+  output.innerHTML = "&lt;ul><br>";
+  if(p1.checked){
+    output.innerHTML += "&lt;li>Newborn Care&lt;/li><br>";
+  }
+  if(p2.checked){
+    output.innerHTML += "&lt;li>Sick Child Diagnosis and Treatment&lt;/li><br>";
+  }
+  if(p3.checked){
+    output.innerHTML += "&lt;li>Dietary/Nutrition Guidance&lt;/li><br>";
+  }
+  if(p4.checked){
+    output.innerHTML += "&lt;li>Lab Testing&lt;/li><br>";
+  }
+  if(p5.checked){
+    output.innerHTML += "&lt;li>Vision and Hearing Services&lt;/li><br>";
+  }
+  if(p6.checked){
+    output.innerHTML += "&lt;li>School and Sports Physicals&lt;/li><br>";
+  }
+  if(p7.checked){
+    output.innerHTML += "&lt;li>Well-Child Care Exams&lt;/li><br>";
+  }
+  if(p8.checked){
+    output.innerHTML += "&lt;li>Immunizations&lt;/li><br>";
+  }
+  if(p9.checked){
+    output.innerHTML += "&lt;li>Prenatal Visists&lt;/li><br>";
+  }
+  output.innerHTML += "&lt;/ul>";
+}
+
+
+
+
+
+function displayDerm(){
+  reset();
+  dermButton.style.color = "red";
   derm.style.display = "block";
-  ped.style.display="none";
 }
 function displayPed(){
-  dentistButton.style.color = "black";
-  dermButton.style.color = "black";
+  reset();
   pedButton.style.color = "red";
-
-  dentist.style.display="none";
-  derm.style.display = "none";
   ped.style.display="block";
 }
+function checkAllPeds(){
+  p1.checked = true;
+  p2.checked = true;
+  p3.checked = true;
+  p4.checked = true;
+  p5.checked = true;
+  p6.checked = true;
+  p7.checked = true;
+  p8.checked = true;
+  p9.checked = true;
+}
+function checkNonePeds(){
+  p1.checked = false;
+  p2.checked = false;
+  p3.checked = false;
+  p4.checked = false;
+  p5.checked = false;
+  p6.checked = false;
+  p7.checked = false;
+  p8.checked = false;
+  p9.checked = false;
+}
+
+
 </script>
 </head>
 <body>
 
 <button type ="button" id="dentistButton" onclick="displayDentist()" style="color:red;">Dentist</button>
 <button type ="button" id="dermButton" onclick="displayDerm()" style="color:black">Dermatologist</button>
-<button type ="button" id="pedButton" onclick="displayPed()" style="color:black">Pediatrist</button>
+<button type ="button" id="pedButton" onclick="displayPed()" style="color:black">Pediatric</button>
 
 <div id="dentist">
-  <input type="checkbox" id="c1">Bonding<br>
-  <input type="checkbox" id="c2">Cosmetic Contouring<br>
-  <input type="checkbox" id="c3">Cosmetic Fillings<br>
-  <input type="checkbox" id="c4">Dentures<br>
-  <input type="checkbox" id="c5">Extractions<br>
-  <input type="checkbox" id="c6">Bone Grafts<br>
-  <input type="checkbox" id="c7">Gum Grafts<br>
-  <input type="checkbox" id="c8">Jaw/TMJ<br>
-  <input type="checkbox" id="c9">Root Canal Therapy<br>
-  <input type="checkbox" id="c10">Sealants<br>
-  <input type="checkbox" id="c11">Veneers<br>
-  <input type="checkbox" id="c12">Braces<br>
-  <input type="checkbox" id="c13">Cosmetic Dentistry<br>
-  <input type="checkbox" id="c14">Crowns and Bridges<br>
-  <input type="checkbox" id="c15">Excessive or Uneven Gums<br>
-  <input type="checkbox" id="c16">Flap Surgery<br>
-  <input type="checkbox" id="c17">Implants<br>
-  <input type="checkbox" id="c18">Maxillofacial Surgery<br>
-  <input type="checkbox" id="c19">Scaling and Root Planing<br>
-  <input type="checkbox" id="c20">Speciality Dentures<br>
-  <input type="checkbox" id="c21">Teeth Whitening<br>
-  <input type="checkbox" id="c22">Invisalign for Teens<br>
-  <input type="checkbox" id="c23">Invisalign for Adults<br>
+  <p>Launch Kit</p>
+  <input type="checkbox" id="d1">Bonding<br>
+  <input type="checkbox" id="d2">Cosmetic Contouring<br>
+  <input type="checkbox" id="d3">Cosmetic Fillings<br>
+  <input type="checkbox" id="d4">Dentures<br>
+  <input type="checkbox" id="d5">Extractions<br>
+  <input type="checkbox" id="d6">Grafts<br>
+  <input type="checkbox" id="d7">Jaw/TMJ<br>
+  <input type="checkbox" id="d8">Root Canal Therapy<br>
+  <input type="checkbox" id="d9">Sealants<br>
+  <input type="checkbox" id="d10">Veneers<br>
+  <input type="checkbox" id="d11">Braces<br>
+  <input type="checkbox" id="d12">Cosmetic Dentistry<br>
+  <input type="checkbox" id="d13">Crowns and Bridges<br>
+  <input type="checkbox" id="d14">Excessive or Uneven Gums<br>
+  <input type="checkbox" id="d15">Flap Surgery<br>
+  <input type="checkbox" id="d16">Implants<br>
+  <input type="checkbox" id="d17">Maxillofacial Surgery<br>
+  <input type="checkbox" id="d18">Scaling and Root Planing<br>
+  <input type="checkbox" id="d19">Speciality Dentures<br>
+  <input type="checkbox" id="d20">Teeth Whitening<br>
+  <button type="button" onclick="checkAllDentist()">Select All</button>
+  <button type="button" onclick="checkNoneDentist()">Select None</button><br>
+  <p>Common Extra Services</p>
+  <input type="checkbox" id="d21">Invisalign<br>
+  <input type="checkbox" id="d22">Oral Cancer Screening<br>
+  <br><br>
+  <input type="checkbox" id="dCheck">Has dear doctor<br>
 
-  <button type="button" onclick="myFunction()">Try it</button>
+  <button type="button" onclick="dentistLinks()">Generate</button>
+  
   <pre id="dentistDisplay"></pre>
 </div>
 
@@ -89,7 +336,20 @@ function displayPed(){
   <p>This will be derm eventually</p>
 </div>
 <div id="ped" style="display:none;">
-  <p>This will be pediatrist eventually</p>
+  <input type="checkbox" id="p1">Newborn Care<br>
+  <input type="checkbox" id="p2">Sick Child Diagnosis and Treatment<br>
+  <input type="checkbox" id="p3">Dietary/Nutrition Guidance<br>
+  <input type="checkbox" id="p4">Lab Testing<br>
+  <input type="checkbox" id="p5">Vision and Hearing Services<br>
+  <input type="checkbox" id="p6">School and Sports Physicals<br>
+  <input type="checkbox" id="p7">Well-Child Care Exams<br>
+  <input type="checkbox" id="p8">Immunizations<br>
+  <input type="checkbox" id="p9">Prenatal Visits<br>
+
+  <button type="button" onclick="pedLinks()">Generate</button>
+  <button type="button" onclick="checkAllPeds()">Select All</button>
+  <button type="button" onclick="checkNonePeds()">Select None</button>
+  <pre id="pedDisplay"></pre>
 </div>
 
 </body>
