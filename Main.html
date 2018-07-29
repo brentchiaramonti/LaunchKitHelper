@@ -10,10 +10,12 @@ function reset() {
   dentistButton.style.color = "black";
   dermButton.style.color = "black";
   pedButton.style.color = "black";
+  footButton.style.color = "black";
 
   dentist.style.display = "none";
   derm.style.display = "none";
   ped.style.display="none";
+  foot.style.display="none";
 }
 
 function dentistLinks() {
@@ -161,100 +163,210 @@ function dentistLinks() {
     } 
   }
 
-  output.innerHTML += "&lt;/ul>"
-    
+  output.innerHTML += "&lt;/ul>"    
+}
+function pedLinks(){
+  var output = document.getElementById("pedDisplay");
+  output.innerHTML = "&lt;ul><br>";
+  if(document.getElementById("p1").checked){
+    output.innerHTML = output.innerHTML + "&lt;li>&lt;a href=\"/aap-library.html?aapcat=newborns_infants_and_toddlers\">Newborn Care&lt;/a>&lt;/li><br>";
+  }
+  if(document.getElementById("p2").checked){
+    output.innerHTML = output.innerHTML + "&lt;li>&lt;a href=\"/aap-library.html?aapcat=common_illnesses_and_conditions\">Sick Child Diagnosis and Treatment&lt;/a>&lt;/li><br>";
+  }
+  if(document.getElementById("p3").checked){
+    output.innerHTML = output.innerHTML + "&lt;li>&lt;a href=\"/aap-library.html?aapcat=nutrition_and_healthy_living\">Dietary/Nutrition Guidance&lt;/a>&lt;/li><br>";
+  }
+  if(document.getElementById("p4").checked){
+    output.innerHTML = output.innerHTML + "&lt;li>&lt;a href=\"https://patiented.solutions.aap.org/handout.aspx?resultClick=1&amp;gbosid=166376\" target=\"_blank\">Lab Testing&lt;/a>&lt;/li><br>";
+  }
+  if(document.getElementById("p5").checked){
+    output.innerHTML = output.innerHTML + "&lt;li>&lt;a href=\"https://patiented.solutions.aap.org/handout.aspx?resultClick=1&amp;gbosid=156589\" target=\"_blank\">Vision Services&lt;/a>&lt;/li><br>";
+     output.innerHTML = output.innerHTML + "&lt;li>&lt;a href=\"https://patiented.solutions.aap.org/handout.aspx?resultClick=1&amp;gbosid=166456\" target=\"_blank\">Hearing Services&lt;/a>&lt;/li><br>";
+  }
+  if(document.getElementById("p6").checked){
+    output.innerHTML = output.innerHTML + "&lt;li>&lt;a href=\"/aap-library.html?aapcat=sports_and_fitness\">School and Sports Physicals&lt;/a>&lt;/li><br>";
+  }
+  if(document.getElementById("p7").checked){
+    output.innerHTML = output.innerHTML + "&lt;li>&lt;a href=\"/aap-library.html?aapcat=well-child_visits\">Well-Child Care Exams&lt;/a>&lt;/li><br>";
+  }
+  if(document.getElementById("p8").checked){
+    output.innerHTML = output.innerHTML + "&lt;li>&lt;a href=\"aap-library.html?aapcat=immunizations\">Immunizations&lt;/a>&lt;/li><br>";
+  }
+  if(document.getElementById("p9").checked){
+    output.innerHTML = output.innerHTML + "&lt;li>Prenatal Visits&lt;/li><br>";
+  }
+  output.innerHTML += "&lt;/ul>";
+}
+function footLinks(){
+  var output = document.getElementById("footDisplay");
+  output.innerHTML = "&lt;ul><br>";
+  if(document.getElementById("f1").checked){
+      output.innerHTML = output.innerHTML + "&lt;li>&lt;a href=\"/library/6698/CommonDisordersoftheAchillesTendon.html\">Achilles Tendon&lt;/a>&lt;/li><br>";
+  }
+  if(document.getElementById("f2").checked){
+      output.innerHTML = output.innerHTML + "&lt;li>&lt;a href=\"/library/6703/ChronicAnkleInstability.html\">Ankle Stability&lt;/a>&lt;/li><br>";
+  }
+  if(document.getElementById("f3").checked){
+      output.innerHTML = output.innerHTML + "&lt;li>&lt;a href=\"/library/6708/Athlete'sFoot.html\">Athlete's Foot&lt;/a>&lt;/li><br>";
+  }
+  if(document.getElementById("f4").checked){
+      output.innerHTML = output.innerHTML + "&lt;li>&lt;a href=\"/library/6723/Callus.html\">Calluses&lt;/a>&lt;/li><br>";
+  }
+  if(document.getElementById("f5").checked){
+      output.innerHTML = output.innerHTML + "&lt;li>Crush Injuries&lt;/li><br>";
+  }
+  if(document.getElementById("f6").checked){
+      output.innerHTML = output.innerHTML + "&lt;li>&lt;a href=\"/library/6761/FlexibleFlatfoot.html\">Flat Feet&lt;/a>&lt;/li><br>";
+  }
+  if(document.getElementById("f7").checked){
+      output.innerHTML = output.innerHTML + "&lt;li>Geriatric Foot Care&lt;/li><br>";
+  }
+  if(document.getElementById("f8").checked){
+      output.innerHTML = output.innerHTML + "&lt;li>&lt;a href=\"/library/6787/HeelPain(PlantarFasciitis).html\">Heel Spur&lt;/a>&lt;/li><br>";
+  }
+  if(document.getElementById("f9").checked){
+      output.innerHTML = output.innerHTML + "&lt;li>&lt;a href=\"/library/6790/IngrownToenails.html\">Ingrown Toenails&lt;/a>&lt;/li><br>";
+  }
+  if(document.getElementById("f10").checked){
+      output.innerHTML = output.innerHTML + "&lt;li>Metatarsalgia&lt;/li><br>";
+  }
+  if(document.getElementById("f11").checked){
+      output.innerHTML = output.innerHTML + "&lt;li>&lt;a href=\"/library/6815/PlantarFasciitis.html\">Plantar Fasciitis&lt;/a>&lt;/li><br>";
+  }
+  if(document.getElementById("f12").checked){
+      output.innerHTML = output.innerHTML + "&lt;li>&lt;a href=\"/library/6858/Warts.html\">Warts&lt;/a>&lt;/li><br>";
+  }
+  if(document.getElementById("f13").checked){
+      output.innerHTML = output.innerHTML + "&lt;li>&lt;a href=\"/library/6704/AnklePain.html\">Ankle Sprains&lt;/a>&lt;/li><br>";
+  }
+  if(document.getElementById("f14").checked){
+      output.innerHTML = output.innerHTML + "&lt;li>&lt;a href=\"/library/6762/FootArthritis.html\">Arthritic Foot and Ankle Care&lt;/a>&lt;/li><br>";
+  }
+  if(document.getElementById("f15").checked){
+      output.innerHTML = output.innerHTML + "&lt;li>&lt;a href=\"/library/6718/Bunions(HalluxAbductoValgus).html\">Bunions&lt;/a>&lt;/li><br>";
+  }
+  if(document.getElementById("f16").checked){
+      output.innerHTML = output.innerHTML + "&lt;li>&lt;a href=\"/library/6733/Corns.html\">Corns&lt;/a>&lt;/li><br>";
+  }
+  if(document.getElementById("f17").checked){
+      output.innerHTML = output.innerHTML + "&lt;li>&lt;a href=\"/library/6745/DiabeticFootCareGuidelines.html\">Diabetic Foot&lt;/a>&lt;/li><br>";
+  }
+  if(document.getElementById("f18").checked){
+      output.innerHTML = output.innerHTML + "&lt;li>&lt;a href=\"/library/6776/FungalNails.html\">Fungus Toenails&lt;/a>&lt;/li><br>";
+  }
+  if(document.getElementById("f19").checked){
+      output.innerHTML = output.innerHTML + "&lt;li>&lt;a href=\"/library/6783/Hammertoes.html\">Hammertoes&lt;/a>&lt;/li><br>";
+  }
+  if(document.getElementById("f20").checked){
+      output.innerHTML = output.innerHTML + "&lt;li>&lt;a href=\"/library/6838/StaphInfectionsoftheFoot.html\">Infections&lt;/a>&lt;/li><br>";
+  }
+  if(document.getElementById("f21").checked){
+      output.innerHTML = output.innerHTML + "&lt;li>Injuries&lt;/li><br>";
+  }
+  if(document.getElementById("f22").checked){
+      output.innerHTML = output.innerHTML + "&lt;li>&lt;a href=\"/library/6792/IntermetatarsalNeuroma.html\">Neuromas&lt;/a>&lt;/li><br>";
+  }
+  if(document.getElementById("f23").checked){
+      output.innerHTML = output.innerHTML + "&lt;li>&lt;a href=\"/library/6809/P.A.D.%28PeripheralArterialDisease%29.html\">Poor Circulation&lt;/a>&lt;/li><br>";
+  }
+  if(document.getElementById("f24").checked){
+      output.innerHTML = output.innerHTML + "&lt;li>&lt;a href=\"/library/6855/UlcersWounds.html\">Wounds&lt;/a>&lt;/li><br>";
+  }
+  output.innerHTML += "&lt;/ul>";
+}
+function dermLinks(){
+  var output = document.getElementById("dermDisplay");
+  output.innerHTML = "&lt;ul><br>";
+  if(document.getElementById("e1").checked){
+      output.innerHTML = output.innerHTML + "&lt;li>&lt;a href=\"/library/8830/Acne.html\">Acne&lt;/a>&lt;/li><br>";
+  }
+  if(document.getElementById("e2").checked){
+      output.innerHTML = output.innerHTML + "&lt;li>&lt;a href=\"/library/8947/HowtoTreatBoilsandStyes.html\">Boils&lt;/a>&lt;/li><br>";
+  }
+  if(document.getElementById("e3").checked){
+      output.innerHTML = output.innerHTML + "&lt;li>Chicken Pox&lt;/li><br>";
+  }
+  if(document.getElementById("e4").checked){
+      output.innerHTML = output.innerHTML + "&lt;li>Dermabrasion&lt;/li><br>";
+  }
+  if(document.getElementById("e5").checked){
+      output.innerHTML = output.innerHTML + "&lt;li>&lt;a href=\"/library/8926/Dyshidroticeczema.html\">Eczema&lt;/a>&lt;/li><br>";
+  }
+  if(document.getElementById("e6").checked){
+      output.innerHTML = output.innerHTML + "&lt;li>>Hair Infections&lt;/li><br>";
+  }
+  if(document.getElementById("e7").checked){
+      output.innerHTML = output.innerHTML + "&lt;li>Laser Skin Treatment&lt;/li><br>";
+  }
+  if(document.getElementById("e8").checked){
+      output.innerHTML = output.innerHTML + "&lt;li>&lt;a href=\"/library/8847/Moles.html\">Moles&lt;/a>&lt;/li><br>";
+  }
+  if(document.getElementById("e9").checked){
+      output.innerHTML = output.innerHTML + "&lt;li>&lt;a href=\"/library/8908/Psoriasis.html\">Psoriasis&lt;/a>&lt;/li><br>";
+  }
+  if(document.getElementById("e10").checked){
+      output.innerHTML = output.innerHTML + "&lt;li>&lt;a href=\"/library/8844/Rosacea.html\">Rosacea&lt;/a>&lt;/li><br>";
+  }
+  if(document.getElementById("e11").checked){
+      output.innerHTML = output.innerHTML + "&lt;li>&lt;a href=\"/library/8878/Shingles.html\">Shingles&lt;/a>&lt;/li><br>";
+  }
+  if(document.getElementById("e12").checked){
+      output.innerHTML = output.innerHTML + "&lt;li>Varicose Veins&lt;/li><br>";
+  }
+  if(document.getElementById("e13").checked){
+      output.innerHTML = output.innerHTML + "&lt;li>&lt;a href=\"/library/8977/WrinkleRemedies.html\">Wrinkles&lt;/a>&lt;/li><br>";
+  }
+  if(document.getElementById("e14").checked){
+      output.innerHTML = output.innerHTML + "&lt;li>Birthmarks&lt;/li><br>";
+  }
+  if(document.getElementById("e15").checked){
+      output.innerHTML = output.innerHTML + "&lt;li>Chemical Peels&lt;/li><br>";
+  }
+  if(document.getElementById("e16").checked){
+      output.innerHTML = output.innerHTML + "&lt;li>Cysts&lt;/li><br>";
+  }
+  if(document.getElementById("e17").checked){
+      output.innerHTML = output.innerHTML + "&lt;li>&lt;a href=\"/library/8925/Contactdermatitis.html\">Dermatitis&lt;/a>&lt;/li><br>";
+  }
+  if(document.getElementById("e18").checked){
+      output.innerHTML = output.innerHTML + "&lt;li>&lt;a href=\"/library/8884/Fillers.html\">Fillers&lt;/a>&lt;/li><br>";
+  }
+  if(document.getElementById("e19").checked){
+      output.innerHTML = output.innerHTML + "&lt;li>Laser Hair Removal&lt;/li><br>";
+  }
+  if(document.getElementById("e2").checked){
+      output.innerHTML = output.innerHTML + "&lt;li>&lt;a href=\"/library/8885/Microdermabrasion.html\">Microdermabrasion&lt;/a>&lt;/li><br>";
+  }
+  if(document.getElementById("e2").checked){
+      output.innerHTML = output.innerHTML + "&lt;li>&lt;a href=\"/library/8897/Poisonivy%2Coak%2Candsumac.html\">Poison Ivy&lt;/a>&lt;/li><br>";
+  }
+  if(document.getElementById("e2").checked){
+      output.innerHTML = output.innerHTML + "&lt;li>Rashes&lt;/li><br>";
+  }
+  if(document.getElementById("e23").checked){
+      output.innerHTML = output.innerHTML + "&lt;li>&lt;a href=\"/library/8998/ProperWoundCare%3AHowtoMinimizeaScar.html\">Scars&lt;/a>&lt;/li><br>";
+  }
+  if(document.getElementById("e24").checked){
+      output.innerHTML = output.innerHTML + "&lt;li>&lt;a href=\"/library/8987/SkinCancerPrevention.html\">Skin Cancers&lt;/a>&lt;/li><br>";
+  }
+  if(document.getElementById("e25").checked){
+      output.innerHTML = output.innerHTML + "&lt;li>&lt;a href=\"/library/8879/Warts.html\">Warts&lt;/a>&lt;/li><br>";
+  }
+  output.innerHTML += "&lt;/ul>";
 }
 
-function checkAllDentist(){
-  d1.checked = true;
-  d2.checked = true;
-  d3.checked = true;
-  d4.checked = true;
-  d5.checked = true;
-  d6.checked = true;
-  d7.checked = true;
-  d8.checked = true;
-  d9.checked = true;
-  d10.checked = true;
-  d11.checked = true;
-  d12.checked = true;
-  d13.checked = true;
-  d14.checked = true;
-  d15.checked = true;
-  d16.checked = true;
-  d17.checked = true;
-  d18.checked = true;
-  d19.checked = true;
-  d20.checked = true;
-  
-}
-function checkNoneDentist(){
-  d1.checked = false;
-  d2.checked = false;
-  d3.checked = false;
-  d4.checked = false;
-  d5.checked = false;
-  d6.checked = false;
-  d7.checked = false;
-  d8.checked = false;
-  d9.checked = false;
-  d10.checked = false;
-  d11.checked = false;
-  d12.checked = false;
-  d13.checked = false;
-  d14.checked = false;
-  d15.checked = false;
-  d16.checked = false;
-  d17.checked = false;
-  d18.checked = false;
-  d19.checked = false;
-  d20.checked = false;
-  
-}
 
 function displayDentist(){
   reset();
   dentistButton.style.color = "red";
   dentist.style.display = "block";
 }
-
-function pedLinks(){
-  var output = document.getElementById("pedDisplay");
-  output.innerHTML = "&lt;ul><br>";
-  if(p1.checked){
-    output.innerHTML += "&lt;li>Newborn Care&lt;/li><br>";
-  }
-  if(p2.checked){
-    output.innerHTML += "&lt;li>Sick Child Diagnosis and Treatment&lt;/li><br>";
-  }
-  if(p3.checked){
-    output.innerHTML += "&lt;li>Dietary/Nutrition Guidance&lt;/li><br>";
-  }
-  if(p4.checked){
-    output.innerHTML += "&lt;li>Lab Testing&lt;/li><br>";
-  }
-  if(p5.checked){
-    output.innerHTML += "&lt;li>Vision and Hearing Services&lt;/li><br>";
-  }
-  if(p6.checked){
-    output.innerHTML += "&lt;li>School and Sports Physicals&lt;/li><br>";
-  }
-  if(p7.checked){
-    output.innerHTML += "&lt;li>Well-Child Care Exams&lt;/li><br>";
-  }
-  if(p8.checked){
-    output.innerHTML += "&lt;li>Immunizations&lt;/li><br>";
-  }
-  if(p9.checked){
-    output.innerHTML += "&lt;li>Prenatal Visists&lt;/li><br>";
-  }
-  output.innerHTML += "&lt;/ul>";
+function displayFoot(){
+  reset();
+  footButton.style.color = "red";
+  foot.style.display = "block";
 }
-
-
-
-
-
 function displayDerm(){
   reset();
   dermButton.style.color = "red";
@@ -265,6 +377,8 @@ function displayPed(){
   pedButton.style.color = "red";
   ped.style.display="block";
 }
+
+
 function checkAllPeds(){
   p1.checked = true;
   p2.checked = true;
@@ -287,6 +401,156 @@ function checkNonePeds(){
   p8.checked = false;
   p9.checked = false;
 }
+function checkAllDentist(){
+  d1.checked = true;
+  d2.checked = true;
+  d3.checked = true;
+  d4.checked = true;
+  d5.checked = true;
+  d6.checked = true;
+  d7.checked = true;
+  d8.checked = true;
+  d9.checked = true;
+  d10.checked = true;
+  d11.checked = true;
+  d12.checked = true;
+  d13.checked = true;
+  d14.checked = true;
+  d15.checked = true;
+  d16.checked = true;
+  d17.checked = true;
+  d18.checked = true;
+  d19.checked = true;
+  d20.checked = true;
+}
+function checkNoneDentist(){
+  d1.checked = false;
+  d2.checked = false;
+  d3.checked = false;
+  d4.checked = false;
+  d5.checked = false;
+  d6.checked = false;
+  d7.checked = false;
+  d8.checked = false;
+  d9.checked = false;
+  d10.checked = false;
+  d11.checked = false;
+  d12.checked = false;
+  d13.checked = false;
+  d14.checked = false;
+  d15.checked = false;
+  d16.checked = false;
+  d17.checked = false;
+  d18.checked = false;
+  d19.checked = false;
+  d20.checked = false;
+}
+function checkAllFoot(){
+  f1.checked = true;
+  f2.checked = true;
+  f3.checked = true;
+  f4.checked = true;
+  f5.checked = true;
+  f6.checked = true;
+  f7.checked = true;
+  f8.checked = true;
+  f9.checked = true;
+  f10.checked = true;
+  f11.checked = true;
+  f12.checked = true;
+  f13.checked = true;
+  f14.checked = true;
+  f15.checked = true;
+  f16.checked = true;
+  f17.checked = true;
+  f18.checked = true;
+  f19.checked = true;
+  f20.checked = true;
+  f21.checked = true;
+  f22.checked = true;
+  f23.checked = true;
+  f24.checked = true;
+}
+function checkNoneFoot(){
+  f1.checked = false;
+  f2.checked = false;
+  f3.checked = false;
+  f4.checked = false;
+  f5.checked = false;
+  f6.checked = false;
+  f7.checked = false;
+  f8.checked = false;
+  f9.checked = false;
+  f10.checked = false;
+  f11.checked = false;
+  f12.checked = false;
+  f13.checked = false;
+  f14.checked = false;
+  f15.checked = false;
+  f16.checked = false;
+  f17.checked = false;
+  f18.checked = false;
+  f19.checked = false;
+  f20.checked = false;
+  f21.checked = false;
+  f22.checked = false;
+  f23.checked = false;
+  f24.checked = false;
+}
+function checkAllDerm(){
+  e1.checked = true;
+  e2.checked = true;
+  e3.checked = true;
+  e4.checked = true;
+  e5.checked = true;
+  e6.checked = true;
+  e7.checked = true;
+  e8.checked = true;
+  e9.checked = true;
+  e10.checked = true;
+  e11.checked = true;
+  e12.checked = true;
+  e13.checked = true;
+  e14.checked = true;
+  e15.checked = true;
+  e16.checked = true;
+  e17.checked = true;
+  e18.checked = true;
+  e19.checked = true;
+  e20.checked = true;
+  e21.checked = true;
+  e22.checked = true;
+  e23.checked = true;
+  e24.checked = true;
+  e25.checked = true;
+}
+function checkNoneDerm(){
+  e1.checked = false;
+  e2.checked = false;
+  e3.checked = false;
+  e4.checked = false;
+  e5.checked = false;
+  e6.checked = false;
+  e7.checked = false;
+  e8.checked = false;
+  e9.checked = false;
+  e10.checked = false;
+  e11.checked = false;
+  e12.checked = false;
+  e13.checked = false;
+  e14.checked = false;
+  e15.checked = false;
+  e16.checked = false;
+  e17.checked = false;
+  e18.checked = false;
+  e19.checked = false;
+  e20.checked = false;
+  e21.checked = false;
+  e22.checked = false;
+  e23.checked = false;
+  e24.checked = false;
+  e25.checked = false;
+}
 
 
 </script>
@@ -296,6 +560,8 @@ function checkNonePeds(){
 <button type ="button" id="dentistButton" onclick="displayDentist()" style="color:red;">Dentist</button>
 <button type ="button" id="dermButton" onclick="displayDerm()" style="color:black">Dermatologist</button>
 <button type ="button" id="pedButton" onclick="displayPed()" style="color:black">Pediatric</button>
+<button type ="button" id="footButton" onclick="displayFoot()" style="color:black">
+Podiatry</button>
 
 <div id="dentist">
   <p>Launch Kit</p>
@@ -333,7 +599,36 @@ function checkNonePeds(){
 </div>
 
 <div id="derm" style="display:none;">
-  <p>This will be derm eventually</p>
+  <input type="checkbox" id="e1">Acne<br>
+  <input type="checkbox" id="e2">Boils<br>
+  <input type="checkbox" id="e3">Chicken Pox<br>
+  <input type="checkbox" id="e4">Dermabrasion<br>
+  <input type="checkbox" id="e5">Eczema<br>
+  <input type="checkbox" id="e6">Hair Infections<br>
+  <input type="checkbox" id="e7">Laser Skin Treatment<br>
+  <input type="checkbox" id="e8">Moles<br>
+  <input type="checkbox" id="e9">Psoriasis<br>
+  <input type="checkbox" id="e10">Rosacea<br>
+  <input type="checkbox" id="e11">Shingles<br>
+  <input type="checkbox" id="e12">Varicose Veins<br>
+  <input type="checkbox" id="e13">Wrinkles<br>
+  <input type="checkbox" id="e14">Birthmarks<br>
+  <input type="checkbox" id="e15">Chemical Peels<br>
+  <input type="checkbox" id="e16">Cysts<br>
+  <input type="checkbox" id="e17">Dermatitis<br>
+  <input type="checkbox" id="e18">Fillers<br>
+  <input type="checkbox" id="e19">Laser Hair Removal<br>
+  <input type="checkbox" id="e20">Microdermabrasion<br>
+  <input type="checkbox" id="e21">Poison Ivy<br>
+  <input type="checkbox" id="e22">Rashes<br>
+  <input type="checkbox" id="e23">Scars<br>
+  <input type="checkbox" id="e24">Skin Cancers<br>
+  <input type="checkbox" id="e25">Warts<br>
+
+  <button type="button" onclick="dermLinks()">Generate</button>
+  <button type="button" onclick="checkAllDerm()">Select All</button>
+  <button type="button" onclick="checkNoneDerm()">Select None</button>
+  <pre id="dermDisplay"></pre>
 </div>
 <div id="ped" style="display:none;">
   <input type="checkbox" id="p1">Newborn Care<br>
@@ -350,6 +645,38 @@ function checkNonePeds(){
   <button type="button" onclick="checkAllPeds()">Select All</button>
   <button type="button" onclick="checkNonePeds()">Select None</button>
   <pre id="pedDisplay"></pre>
+</div>
+
+<div id="foot" style="display:none;">
+  <input type="checkbox" id="f1">Achilles Tendon<br>
+  <input type="checkbox" id="f2">Ankle Stability<br>
+  <input type="checkbox" id="f3">Athletes Foot<br>
+  <input type="checkbox" id="f4">Calluses<br>
+  <input type="checkbox" id="f5">Crush Injuries<br>
+  <input type="checkbox" id="f6">Flat Feet<br>
+  <input type="checkbox" id="f7">Geriatric Foot Care<br>
+  <input type="checkbox" id="f8">Heel Spur<br>
+  <input type="checkbox" id="f9">Ingrown Toenails<br>
+  <input type="checkbox" id="f10">Metatarsalgia<br>
+  <input type="checkbox" id="f11">Platar Fasciitis<br>
+  <input type="checkbox" id="f12">Warts<br>
+  <input type="checkbox" id="f13">Ankle Sprains<br>
+  <input type="checkbox" id="f14">Arthritic Foot and Ankle Care<br>
+  <input type="checkbox" id="f15">Bunions<br>
+  <input type="checkbox" id="f16">Corns<br>
+  <input type="checkbox" id="f17">Diabetic Foot<br>
+  <input type="checkbox" id="f18">Fungus Toenails<br>
+  <input type="checkbox" id="f19">Hammertoes<br>
+  <input type="checkbox" id="f20">Infections<br>
+  <input type="checkbox" id="f21">Injuries<br>
+  <input type="checkbox" id="f22">Neuromas<br>
+  <input type="checkbox" id="f23">Poor Circulation<br>
+  <input type="checkbox" id="f24">Wounds<br>
+
+  <button type="button" onclick="footLinks()">Generate</button>
+  <button type="button" onclick="checkAllFoot()">Select All</button>
+  <button type="button" onclick="checkNoneFoot()">Select None</button>
+  <pre id="footDisplay"></pre>
 </div>
 
 </body>
