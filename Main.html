@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Test</title>
+<title>Launch Kit Helper</title>
 
 <script>
 
@@ -89,6 +89,9 @@ function dentistLinks() {
     if(document.getElementById("d22").checked){
       output.innerHTML = output.innerHTML + "&lt;li>&lt;a href=\"articles/general/502420-oral-cancer\">Oral Cancer&lt;/a>&lt;/li><br>"
     }
+    if(document.getElementById("d23").checked){
+      output.innerHTML = output.innerHTML + "&lt;li>Sleep Apnea&lt;/li><br>"
+    }
   } 
   
   if(document.getElementById("dCheck").checked){
@@ -161,6 +164,9 @@ function dentistLinks() {
     if(document.getElementById("d22").checked){
       output.innerHTML = output.innerHTML + "&lt;li>&lt;a href=\"articles/dear_doctor/509307-oral-cancer-screening\">Oral Cancer Screening&lt;/a>&lt;/li><br>";
     } 
+    if(document.getElementById("d23").checked){
+      output.innerHTML = output.innerHTML + "&lt;li>&lt;a href=\"articles/dear_doctor/509345-snoring-sleep-apnea\">Snoring &amp; Sleep Apnea&lt;/a>&lt;/li><br>";
+    }
   }
 
   output.innerHTML += "&lt;/ul>"    
@@ -590,6 +596,7 @@ Podiatry</button>
   <p>Common Extra Services</p>
   <input type="checkbox" id="d21">Invisalign<br>
   <input type="checkbox" id="d22">Oral Cancer Screening<br>
+  <input type="checkbox" id="d23">Sleep Apnea<br>
   <br><br>
   <input type="checkbox" id="dCheck">Has dear doctor<br>
 
