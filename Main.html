@@ -6,6 +6,13 @@
 
 <script>
 
+function makeLink(link, name, extra){
+  return "&lt;li>&lt;a href=\"" + link + "\">" + name + "&lt;/a>" + extra + "&lt;/li><br>"
+}
+function makeNotLink(name, extra){
+  return "&lt;li>" + name + extra + "&lt;/li><br>"
+}
+
 function reset() {
   dentistButton.style.color = "black";
   dermButton.style.color = "black";
@@ -184,11 +191,11 @@ function pedLinks(){
     output.innerHTML = output.innerHTML + "&lt;li>&lt;a href=\"/aap-library.html?aapcat=nutrition_and_healthy_living\">Dietary/Nutrition Guidance&lt;/a>&lt;/li><br>";
   }
   if(document.getElementById("p4").checked){
-    output.innerHTML = output.innerHTML + "&lt;li>&lt;a href=\"https://patiented.solutions.aap.org/handout.aspx?resultClick=1&amp;gbosid=166376\" target=\"_blank\">Lab Testing&lt;/a>&lt;/li><br>";
+    output.innerHTML = output.innerHTML + makeLink("https://patiented.solutions.aap.org/handout.aspx?gbosid=166475&username=officite&password=webS1te", "Lab Testing", "");
   }
   if(document.getElementById("p5").checked){
-    output.innerHTML = output.innerHTML + "&lt;li>&lt;a href=\"https://patiented.solutions.aap.org/handout.aspx?resultClick=1&amp;gbosid=156589\" target=\"_blank\">Vision Services&lt;/a>&lt;/li><br>";
-     output.innerHTML = output.innerHTML + "&lt;li>&lt;a href=\"https://patiented.solutions.aap.org/handout.aspx?resultClick=1&amp;gbosid=166456\" target=\"_blank\">Hearing Services&lt;/a>&lt;/li><br>";
+    output.innerHTML = output.innerHTML + makeLink("https://patiented.solutions.aap.org/handout.aspx?gbosid=166475&username=officite&password=webS1te", "Vision Services", "");
+    output.innerHTML = output.innerHTML + makeLink("https://patiented.solutions.aap.org/handout.aspx?gbosid=166456&username=officite&password=webS1te", "Hearing Services", "");
   }
   if(document.getElementById("p6").checked){
     output.innerHTML = output.innerHTML + "&lt;li>&lt;a href=\"/aap-library.html?aapcat=sports_and_fitness\">School and Sports Physicals&lt;/a>&lt;/li><br>";
@@ -200,7 +207,7 @@ function pedLinks(){
     output.innerHTML = output.innerHTML + "&lt;li>&lt;a href=\"aap-library.html?aapcat=immunizations\">Immunizations&lt;/a>&lt;/li><br>";
   }
   if(document.getElementById("p9").checked){
-    output.innerHTML = output.innerHTML + "&lt;li>Prenatal Visits&lt;/li><br>";
+    output.innerHTML = output.innerHTML + makeNotLink("Prenatal Visits", "");
   }
   output.innerHTML += "&lt;/ul>";
 }
