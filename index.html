@@ -14,7 +14,7 @@ function makeNotLink(name, extra){
   return "&lt;li>" + name + extra + "&lt;/li><br>"
 }
 function makePodiatryVideoLink(name, link){
-  return "&lt;li>&lt;a class=\"html5lightbox\" href=\"https://player.vimeo.com/video/"+ link + "?title=0&amp;byline=0&amp;portrait=0\" title=\"" + name + "\">"+ name +  "&lt;/li><br>";
+  return "&lt;li>&lt;a data-lity=\"\" href=\"https://player.vimeo.com/video/"+ link + "?title=0&amp;byline=0&amp;portrait=0\" title=\"" + name + "\">"+ name +  "&lt;/li><br>";
 }
 
 function reset() {
@@ -967,6 +967,7 @@ Podiatry Videos</button>
   <label><input type="checkbox" name="podVideos">Walking</label><br>
   <label><input type="checkbox" name="podVideos">Women&rsquo;s Feet</label><br>
 </div>
+  <p><a href="https://drive.google.com/drive/folders/1JoAqqFgm77sgkf-sTp49_HEqn6TJsukL" target="_blank">Click here for podiatry video documentation</a></p>
   <button type="button" onclick="checkNonePodVideos()">Select None</button>
   <button type="button" onclick="checkStarterPodVideos()">Generate Stater</button>
   <button type="button" onclick="podVideoLinks()">Generate</button>
