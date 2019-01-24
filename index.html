@@ -16,6 +16,9 @@ function makeNotLink(name, extra){
 function makePodiatryVideoLink(name, link){
   return "&lt;li>&lt;a data-lity=\"\" href=\"https://player.vimeo.com/video/"+ link + "?title=0&amp;byline=0&amp;portrait=0\" title=\"" + name + "\">"+ name +  "&lt;/li><br>";
 }
+function makePodiatryVideoLinkOld(name, link){
+  return "&lt;li>&lt;a class=\"html5lightbox\" href=\"https://player.vimeo.com/video/"+ link + "?title=0&amp;byline=0&amp;portrait=0\" title=\"" + name + "\">"+ name +  "&lt;/li><br>";
+}
 
 function reset() {
   dentistButton.style.color = "black";
@@ -468,6 +471,7 @@ function podVideoLinks(){
   var women = false;
   var first = true;
   var number = 0;
+  var oldEditor = document.getElementById("podVideosOld").checked;
   var i;
   for(i = 0; i < checkboxes.length; i++){
     if(checkboxes[i].checked){
@@ -527,8 +531,11 @@ function podVideoLinks(){
       number++;
       var name = cleanText(checkboxes[i].parentElement.innerHTML);
       var link = dict[name];
-      output.innerHTML = output.innerHTML +  makePodiatryVideoLink(name, link);
-    
+      if(oldEditor){
+        output.innerHTML = output.innerHTML +  makePodiatryVideoLinkOld(name, link);
+      } else {
+        output.innerHTML = output.innerHTML +  makePodiatryVideoLink(name, link);
+      }
       
     }
 
@@ -886,93 +893,94 @@ Podiatry Videos</button>
 
 <div id="podVideos" style="display:none;">
   <div style="float:left;">
-  <p>BONE/JOINT/TENDON</p>
-  <label><input type="checkbox" name="podVideos">Achilles Tendonitis</label><br>
-  <label><input type="checkbox" name="podVideos">Anatomy of the Foot</label><br>
-  <label><input type="checkbox" name="podVideos">Ankle Fractures</label><br>
-  <label><input type="checkbox" name="podVideos">Ankle Sprains</label><br>
-  <label><input type="checkbox" name="podVideos">Bone Spurs</label><br>
-  <label><input type="checkbox" name="podVideos">Bunions</label><br>
-  <label><input type="checkbox" name="podVideos">Flat Foot</label><br>
-  <label><input type="checkbox" name="podVideos">Forefoot Pain</label><br>
-  <label><input type="checkbox" name="podVideos">Gait Abnormalities</label><br>
-  <label><input type="checkbox" name="podVideos">Gout</label><br>
-  <label><input type="checkbox" name="podVideos">Hammertoes</label><br>
-  <label><input type="checkbox" name="podVideos">Metatarsalgia</label><br>
-  <label><input type="checkbox" name="podVideos">Neuroma</label><br>
-  <label><input type="checkbox" name="podVideos">Plantar Fasciitis</label><br>
-  <label><input type="checkbox" name="podVideos">Shin Splints</label><br>
-  <label><input type="checkbox" name="podVideos">Proprioception</label><br>
-  <label><input type="checkbox" name="podVideos">Runner&rsquo;s Knee</label><br>
-  <label><input type="checkbox" name="podVideos">Stress Fractures</label><br>
-  <label><input type="checkbox" name="podVideos">Tailor&rsquo;s Bunion</label><br>
-  <label><input type="checkbox" name="podVideos">Tarsal Tunnel Syndrome</label><br>
-  <label><input type="checkbox" name="podVideos">Tendonitis</label><br>
-  <label><input type="checkbox" name="podVideos">Turf Toe</label><br>
+    <p>BONE/JOINT/TENDON</p>
+    <label><input type="checkbox" name="podVideos">Achilles Tendonitis</label><br>
+    <label><input type="checkbox" name="podVideos">Anatomy of the Foot</label><br>
+    <label><input type="checkbox" name="podVideos">Ankle Fractures</label><br>
+    <label><input type="checkbox" name="podVideos">Ankle Sprains</label><br>
+    <label><input type="checkbox" name="podVideos">Bone Spurs</label><br>
+    <label><input type="checkbox" name="podVideos">Bunions</label><br>
+    <label><input type="checkbox" name="podVideos">Flat Foot</label><br>
+    <label><input type="checkbox" name="podVideos">Forefoot Pain</label><br>
+    <label><input type="checkbox" name="podVideos">Gait Abnormalities</label><br>
+    <label><input type="checkbox" name="podVideos">Gout</label><br>
+    <label><input type="checkbox" name="podVideos">Hammertoes</label><br>
+    <label><input type="checkbox" name="podVideos">Metatarsalgia</label><br>
+    <label><input type="checkbox" name="podVideos">Neuroma</label><br>
+    <label><input type="checkbox" name="podVideos">Plantar Fasciitis</label><br>
+    <label><input type="checkbox" name="podVideos">Shin Splints</label><br>
+    <label><input type="checkbox" name="podVideos">Proprioception</label><br>
+    <label><input type="checkbox" name="podVideos">Runner&rsquo;s Knee</label><br>
+    <label><input type="checkbox" name="podVideos">Stress Fractures</label><br>
+    <label><input type="checkbox" name="podVideos">Tailor&rsquo;s Bunion</label><br>
+    <label><input type="checkbox" name="podVideos">Tarsal Tunnel Syndrome</label><br>
+    <label><input type="checkbox" name="podVideos">Tendonitis</label><br>
+    <label><input type="checkbox" name="podVideos">Turf Toe</label><br>
 
-  <p>NAILS &amp; SKIN</p>
-  <label><input type="checkbox" name="podVideos">Athlete&rsquo;s Foot</label><br>
-  <label><input type="checkbox" name="podVideos">Blisters</label><br>
-  <label><input type="checkbox" name="podVideos">Chronic Wounds</label><br>
-  <label><input type="checkbox" name="podVideos">Corns and Calluses</label><br>
-  <label><input type="checkbox" name="podVideos">Dry Skin</label><br>
-  <label><input type="checkbox" name="podVideos">Foot Odor</label><br>
-  <label><input type="checkbox" name="podVideos">Frostbite</label><br>
-  <label><input type="checkbox" name="podVideos">Fungal Nail</label><br>
-  <label><input type="checkbox" name="podVideos">Heel Fissures</label><br>
-  <label><input type="checkbox" name="podVideos">Ingrown Toenails</label><br>
-  <label><input type="checkbox" name="podVideos">Latex Allergy</label><br>
-  <label><input type="checkbox" name="podVideos">Malignant Melanoma</label><br>
-  <label><input type="checkbox" name="podVideos">Plantar Warts</label><br>
-  <label><input type="checkbox" name="podVideos">Skin Growths</label><br>
-  <label><input type="checkbox" name="podVideos">Soft Tissue Infections</label><br>
-  <label><input type="checkbox" name="podVideos">Wounds and Ulcers</label><br>
+    <p>NAILS &amp; SKIN</p>
+    <label><input type="checkbox" name="podVideos">Athlete&rsquo;s Foot</label><br>
+    <label><input type="checkbox" name="podVideos">Blisters</label><br>
+    <label><input type="checkbox" name="podVideos">Chronic Wounds</label><br>
+    <label><input type="checkbox" name="podVideos">Corns and Calluses</label><br>
+    <label><input type="checkbox" name="podVideos">Dry Skin</label><br>
+    <label><input type="checkbox" name="podVideos">Foot Odor</label><br>
+    <label><input type="checkbox" name="podVideos">Frostbite</label><br>
+    <label><input type="checkbox" name="podVideos">Fungal Nail</label><br>
+    <label><input type="checkbox" name="podVideos">Heel Fissures</label><br>
+    <label><input type="checkbox" name="podVideos">Ingrown Toenails</label><br>
+    <label><input type="checkbox" name="podVideos">Latex Allergy</label><br>
+    <label><input type="checkbox" name="podVideos">Malignant Melanoma</label><br>
+    <label><input type="checkbox" name="podVideos">Plantar Warts</label><br>
+    <label><input type="checkbox" name="podVideos">Skin Growths</label><br>
+    <label><input type="checkbox" name="podVideos">Soft Tissue Infections</label><br>
+    <label><input type="checkbox" name="podVideos">Wounds and Ulcers</label><br>
 
-</div>
-<div style="float:left">
-  <p>DIABETIC HEALTH</p>
-  <label><input type="checkbox" name="podVideos">Caring for the Diabetic Foot</label><br>
-  <label><input type="checkbox" name="podVideos">Chronic Wounds</label><br>
-  <label><input type="checkbox" name="podVideos">Diabetes</label><br>
-  <label><input type="checkbox" name="podVideos">Diabetes and the Foot</label><br>
-  <label><input type="checkbox" name="podVideos">Diabetic Shoes and Your Foot Health</label><br>
-  <label><input type="checkbox" name="podVideos">High Blood Pressure</label><br>  
-  <label><input type="checkbox" name="podVideos">Hypertension and Your Podiatrist</label><br>
-  <label><input type="checkbox" name="podVideos">Peripheral Arterial Disease</label><br>
-  <label><input type="checkbox" name="podVideos">Peripheral Neuropathy</label><br>
-  <label><input type="checkbox" name="podVideos">Soft Tissue Infections</label><br>
-  <label><input type="checkbox" name="podVideos">Wounds and Ulcers</label><br>
+  </div>
+  <div style="float:left">
+    <p>DIABETIC HEALTH</p>
+    <label><input type="checkbox" name="podVideos">Caring for the Diabetic Foot</label><br>
+    <label><input type="checkbox" name="podVideos">Chronic Wounds</label><br>
+    <label><input type="checkbox" name="podVideos">Diabetes</label><br>
+    <label><input type="checkbox" name="podVideos">Diabetes and the Foot</label><br>
+    <label><input type="checkbox" name="podVideos">Diabetic Shoes and Your Foot Health</label><br>
+    <label><input type="checkbox" name="podVideos">High Blood Pressure</label><br>  
+    <label><input type="checkbox" name="podVideos">Hypertension and Your Podiatrist</label><br>
+    <label><input type="checkbox" name="podVideos">Peripheral Arterial Disease</label><br>
+    <label><input type="checkbox" name="podVideos">Peripheral Neuropathy</label><br>
+    <label><input type="checkbox" name="podVideos">Soft Tissue Infections</label><br>
+    <label><input type="checkbox" name="podVideos">Wounds and Ulcers</label><br>
 
-  <p>ORTHOTICS AND FOOTWEAR</p>
-  <label><input type="checkbox" name="podVideos">Athletic Shoes</label><br>
-  <label><input type="checkbox" name="podVideos">Children&rsquo;s Shoes</label><br>
-  <label><input type="checkbox" name="podVideos">Diabetic Shoes and Your Foot Health</label><br>
-  <label><input type="checkbox" name="podVideos">Kinesio Taping</label><br>
-  <label><input type="checkbox" name="podVideos">Orthotics</label><br>
-  <label><input type="checkbox" name="podVideos">Surgical Stockings</label><br>
+    <p>ORTHOTICS AND FOOTWEAR</p>
+    <label><input type="checkbox" name="podVideos">Athletic Shoes</label><br>
+    <label><input type="checkbox" name="podVideos">Children&rsquo;s Shoes</label><br>
+    <label><input type="checkbox" name="podVideos">Diabetic Shoes and Your Foot Health</label><br>
+    <label><input type="checkbox" name="podVideos">Kinesio Taping</label><br>
+    <label><input type="checkbox" name="podVideos">Orthotics</label><br>
+    <label><input type="checkbox" name="podVideos">Surgical Stockings</label><br>
 
-  <p>SPECIALITY SERVICES &amp; SURGERIES</p>
-  <label><input type="checkbox" name="podVideos">Cryosurgery</label><br>
-  <label><input type="checkbox" name="podVideos">Diagnostic Ultrasound</label><br>
-  <label><input type="checkbox" name="podVideos">Laser Therapy for Fungal Nail</label><br>
-  <label><input type="checkbox" name="podVideos">Laser Treatment for Pain Management</label><br>
-  <label><input type="checkbox" name="podVideos">Medical Pedicures</label><br>
-  <label><input type="checkbox" name="podVideos">Shockwave Therapy</label><br>
+    <p>SPECIALITY SERVICES &amp; SURGERIES</p>
+    <label><input type="checkbox" name="podVideos">Cryosurgery</label><br>
+    <label><input type="checkbox" name="podVideos">Diagnostic Ultrasound</label><br>
+    <label><input type="checkbox" name="podVideos">Laser Therapy for Fungal Nail</label><br>
+    <label><input type="checkbox" name="podVideos">Laser Treatment for Pain Management</label><br>
+    <label><input type="checkbox" name="podVideos">Medical Pedicures</label><br>
+    <label><input type="checkbox" name="podVideos">Shockwave Therapy</label><br>
 
-  <p>WOMEN/CHILDREN/SENIORS &amp; EXERCISE</p>
-  <label><input type="checkbox" name="podVideos">Children&rsquo;s Feet Overuse</label><br>
-  <label><input type="checkbox" name="podVideos">Children&rsquo;s Shoes</label><br>
-  <label><input type="checkbox" name="podVideos">Fall Prevention for Seniors</label><br>
-  <label><input type="checkbox" name="podVideos">Senior&rsquo;s Foot Health</label><br>
-  <label><input type="checkbox" name="podVideos">Walking</label><br>
-  <label><input type="checkbox" name="podVideos">Women&rsquo;s Feet</label><br>
-</div>
-  <p><a href="https://drive.google.com/drive/folders/1JoAqqFgm77sgkf-sTp49_HEqn6TJsukL" target="_blank">Click here for podiatry video documentation</a></p>
-  <button type="button" onclick="checkNonePodVideos()">Select None</button>
-  <button type="button" onclick="checkStarterPodVideos()">Generate Stater</button>
-  <button type="button" onclick="podVideoLinks()">Generate</button>
-  <pre id="podVideoNumber"></pre>
-</div>
+    <p>WOMEN/CHILDREN/SENIORS &amp; EXERCISE</p>
+    <label><input type="checkbox" name="podVideos">Children&rsquo;s Feet Overuse</label><br>
+    <label><input type="checkbox" name="podVideos">Children&rsquo;s Shoes</label><br>
+    <label><input type="checkbox" name="podVideos">Fall Prevention for Seniors</label><br>
+    <label><input type="checkbox" name="podVideos">Senior&rsquo;s Foot Health</label><br>
+    <label><input type="checkbox" name="podVideos">Walking</label><br>
+    <label><input type="checkbox" name="podVideos">Women&rsquo;s Feet</label><br>
+  </div>
+    <p><a href="https://drive.google.com/drive/folders/1JoAqqFgm77sgkf-sTp49_HEqn6TJsukL" target="_blank">Click here for podiatry video documentation</a></p>
+    <label><input type="checkbox" id="podVideosOld">Old Editor</label>
+    <button type="button" onclick="checkNonePodVideos()">Select None</button>
+    <button type="button" onclick="checkStarterPodVideos()">Generate Stater</button>
+    <button type="button" onclick="podVideoLinks()">Generate</button>
+    <pre id="podVideoNumber"></pre>
+  </div>
 
 <pre id="display"></pre>
 
