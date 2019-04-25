@@ -14,10 +14,10 @@ function makeNotLink(name, extra){
   return "&lt;li>" + name + extra + "&lt;/li><br>"
 }
 function makePodiatryVideoLink(name, link){
-  return "&lt;li>&lt;a data-lity=\"\" href=\"https://player.vimeo.com/video/"+ link + "?title=0&amp;byline=0&amp;portrait=0\" title=\"" + name + "\">"+ name +  "&lt;/li><br>";
+  return "&lt;li>&lt;a data-lity=\"\" href=\"https://player.vimeo.com/video/"+ link + "?title=0&amp;byline=0&amp;portrait=0\" title=\"" + name + "\">"+ name +  "&lt;/a>&lt;/li><br>";
 }
 function makePodiatryVideoLinkOld(name, link){
-  return "&lt;li>&lt;a class=\"html5lightbox\" href=\"https://player.vimeo.com/video/"+ link + "?title=0&amp;byline=0&amp;portrait=0\" title=\"" + name + "\">"+ name +  "&lt;/li><br>";
+  return "&lt;li>&lt;a class=\"html5lightbox\" href=\"https://player.vimeo.com/video/"+ link + "?title=0&amp;byline=0&amp;portrait=0\" title=\"" + name + "\">"+ name +  "&lt;/a>&lt;/li><br>";
 }
 
 function reset() {
@@ -310,81 +310,88 @@ function footLinks(){
 }
 function dermLinks(){
   var output = document.getElementById("display");
+  var oldLink = {
+    "Acne" : ["/library/8830/Acne.html", ""],
+    "Boils" : ["/library/8947/HowtoTreatBoilsandStyes.html", ""],
+    "Chicken Pox" : [" ", ""],
+    "Dermabrasion" : [" ", ""],
+    "Eczema" : ["/library/8926/Dyshidroticeczema.html", ""],
+    "Hair Infections" : [" ", ""],
+    "Laser Skin Treatment" : [" ", ""],
+    "Moles" : ["/library/8847/Moles.html", ""],
+    "Psoriasis" : ["/library/8908/Psoriasis.html", ""],
+    "Rosacea" : ["/library/8844/Rosacea.html", ""],
+    "Shingles" : ["/library/8878/Shingles.html", ""],
+    "Varicose Veins" : [" ", ""],
+    "Wrinkles" : ["/library/8977/WrinkleRemedies.html", ""],
+    "Birthmarks" : [" ", ""],
+    "Chemical Peels" : [" ", ""],
+    "Cysts" : [" ", ""],
+    "Dermatitis" : ["/library/8925/Contactdermatitis.html", ""],
+    "Fillers" : ["/library/8884/Fillers.html", ""],
+    "Laser Hair Removal" : [" ", ""],
+    "Microdermabrasion" : ["/library/8885/Microdermabrasion.html", ""],
+    "Poison Ivy" : ["/library/8897/Poisonivy%2Coak%2Candsumac.html", ""],
+    "Rashes" : [" ", ""],
+    "Scars" : ["/library/8998/ProperWoundCare%3AHowtoMinimizeaScar.html", ""],
+    "Skin Cancers" : ["/library/8987/SkinCancerPrevention.html", ""],
+    "Warts" : ["/library/8879/Warts.html", ""],
+  }
+  var newLink = {
+    "Acne" : ["/library/8830/Acne.html", ""],
+    "Boils" : ["/library/8947/HowtoTreatBoilsandStyes.html", ""],
+    "Chicken Pox" : [" ", ""],
+    "Dermabrasion" : [" ", ""],
+    "Eczema" : ["/library/8926/Dyshidroticeczema.html", ""],
+    "Hair Infections" : [" ", ""],
+    "Laser Skin Treatment" : [" ", ""],
+    "Moles" : ["/library/8847/Moles.html", ""],
+    "Psoriasis" : ["/library/8908/Psoriasis.html", ""],
+    "Rosacea" : ["/library/8844/Rosacea.html", ""],
+    "Shingles" : ["/library/8878/Shingles.html", ""],
+    "Varicose Veins" : [" ", ""],
+    "Wrinkles" : ["/library/8977/WrinkleRemedies.html", ""],
+    "Birthmarks" : [" ", ""],
+    "Chemical Peels" : [" ", ""],
+    "Cysts" : [" ", ""],
+    "Dermatitis" : ["/library/8925/Contactdermatitis.html", ""],
+    "Fillers" : ["/library/8884/Fillers.html", ""],
+    "Laser Hair Removal" : [" ", ""],
+    "Microdermabrasion" : ["/library/8885/Microdermabrasion.html", ""],
+    "Poison Ivy" : ["/library/8897/Poisonivy%2Coak%2Candsumac.html", ""],
+    "Rashes" : [" ", ""],
+    "Scars" : ["/library/8998/ProperWoundCare%3AHowtoMinimizeaScar.html", ""],
+    "Skin Cancers" : ["/library/8987/SkinCancerPrevention.html", ""],
+    "Warts" : ["/library/8879/Warts.html", ""],
+  }
+  var checkboxes = document.getElementsByName("dermCheck");
+
   output.innerHTML = "&lt;ul><br>";
-  if(document.getElementById("e1").checked){
-      output.innerHTML = output.innerHTML + "&lt;li>&lt;a href=\"/library/8830/Acne.html\">Acne&lt;/a>&lt;/li><br>";
-  }
-  if(document.getElementById("e2").checked){
-      output.innerHTML = output.innerHTML + "&lt;li>&lt;a href=\"/library/8947/HowtoTreatBoilsandStyes.html\">Boils&lt;/a>&lt;/li><br>";
-  }
-  if(document.getElementById("e3").checked){
-      output.innerHTML = output.innerHTML + "&lt;li>Chicken Pox&lt;/li><br>";
-  }
-  if(document.getElementById("e4").checked){
-      output.innerHTML = output.innerHTML + "&lt;li>Dermabrasion&lt;/li><br>";
-  }
-  if(document.getElementById("e5").checked){
-      output.innerHTML = output.innerHTML + "&lt;li>&lt;a href=\"/library/8926/Dyshidroticeczema.html\">Eczema&lt;/a>&lt;/li><br>";
-  }
-  if(document.getElementById("e6").checked){
-      output.innerHTML = output.innerHTML + "&lt;li>Hair Infections&lt;/li><br>";
-  }
-  if(document.getElementById("e7").checked){
-      output.innerHTML = output.innerHTML + "&lt;li>Laser Skin Treatment&lt;/li><br>";
-  }
-  if(document.getElementById("e8").checked){
-      output.innerHTML = output.innerHTML + "&lt;li>&lt;a href=\"/library/8847/Moles.html\">Moles&lt;/a>&lt;/li><br>";
-  }
-  if(document.getElementById("e9").checked){
-      output.innerHTML = output.innerHTML + "&lt;li>&lt;a href=\"/library/8908/Psoriasis.html\">Psoriasis&lt;/a>&lt;/li><br>";
-  }
-  if(document.getElementById("e10").checked){
-      output.innerHTML = output.innerHTML + "&lt;li>&lt;a href=\"/library/8844/Rosacea.html\">Rosacea&lt;/a>&lt;/li><br>";
-  }
-  if(document.getElementById("e11").checked){
-      output.innerHTML = output.innerHTML + "&lt;li>&lt;a href=\"/library/8878/Shingles.html\">Shingles&lt;/a>&lt;/li><br>";
-  }
-  if(document.getElementById("e12").checked){
-      output.innerHTML = output.innerHTML + "&lt;li>Varicose Veins&lt;/li><br>";
-  }
-  if(document.getElementById("e13").checked){
-      output.innerHTML = output.innerHTML + "&lt;li>&lt;a href=\"/library/8977/WrinkleRemedies.html\">Wrinkles&lt;/a>&lt;/li><br>";
-  }
-  if(document.getElementById("e14").checked){
-      output.innerHTML = output.innerHTML + "&lt;li>Birthmarks&lt;/li><br>";
-  }
-  if(document.getElementById("e15").checked){
-      output.innerHTML = output.innerHTML + "&lt;li>Chemical Peels&lt;/li><br>";
-  }
-  if(document.getElementById("e16").checked){
-      output.innerHTML = output.innerHTML + "&lt;li>Cysts&lt;/li><br>";
-  }
-  if(document.getElementById("e17").checked){
-      output.innerHTML = output.innerHTML + "&lt;li>&lt;a href=\"/library/8925/Contactdermatitis.html\">Dermatitis&lt;/a>&lt;/li><br>";
-  }
-  if(document.getElementById("e18").checked){
-      output.innerHTML = output.innerHTML + "&lt;li>&lt;a href=\"/library/8884/Fillers.html\">Fillers&lt;/a>&lt;/li><br>";
-  }
-  if(document.getElementById("e19").checked){
-      output.innerHTML = output.innerHTML + "&lt;li>Laser Hair Removal&lt;/li><br>";
-  }
-  if(document.getElementById("e2").checked){
-      output.innerHTML = output.innerHTML + "&lt;li>&lt;a href=\"/library/8885/Microdermabrasion.html\">Microdermabrasion&lt;/a>&lt;/li><br>";
-  }
-  if(document.getElementById("e2").checked){
-      output.innerHTML = output.innerHTML + "&lt;li>&lt;a href=\"/library/8897/Poisonivy%2Coak%2Candsumac.html\">Poison Ivy&lt;/a>&lt;/li><br>";
-  }
-  if(document.getElementById("e2").checked){
-      output.innerHTML = output.innerHTML + "&lt;li>Rashes&lt;/li><br>";
-  }
-  if(document.getElementById("e23").checked){
-      output.innerHTML = output.innerHTML + "&lt;li>&lt;a href=\"/library/8998/ProperWoundCare%3AHowtoMinimizeaScar.html\">Scars&lt;/a>&lt;/li><br>";
-  }
-  if(document.getElementById("e24").checked){
-      output.innerHTML = output.innerHTML + "&lt;li>&lt;a href=\"/library/8987/SkinCancerPrevention.html\">Skin Cancers&lt;/a>&lt;/li><br>";
-  }
-  if(document.getElementById("e25").checked){
-      output.innerHTML = output.innerHTML + "&lt;li>&lt;a href=\"/library/8879/Warts.html\">Warts&lt;/a>&lt;/li><br>";
+
+  var link;
+  var name;
+  var value;
+  var extra;
+  var isOldEditor = document.getElementById("dermOldEditor").checked;
+  for(var i = 0; i < checkboxes.length; i++){
+
+    if(checkboxes[i].checked){
+      name = cleanText(checkboxes[i].parentElement.innerHTML);
+      if(isOldEditor){
+        value = oldLink[name];
+      } else {
+        value = newLink[name];
+      }
+
+      link = value[0];
+      extra = value[1];
+      
+      if(link == " "){
+        output.innerHTML = output.innerHTML + makeNotLink(name, extra);
+      } else {
+        output.innerHTML = output.innerHTML + makeLink(link, name, extra)
+      }
+    }
   }
   output.innerHTML += "&lt;/ul>";
 }
@@ -814,32 +821,35 @@ Podiatry Videos</button>
 </div>
 
 <div id="derm" style="display:none;">
-  <input type="checkbox" id="e1">Acne<br>
-  <input type="checkbox" id="e2">Boils<br>
-  <input type="checkbox" id="e3">Chicken Pox<br>
-  <input type="checkbox" id="e4">Dermabrasion<br>
-  <input type="checkbox" id="e5">Eczema<br>
-  <input type="checkbox" id="e6">Hair Infections<br>
-  <input type="checkbox" id="e7">Laser Skin Treatment<br>
-  <input type="checkbox" id="e8">Moles<br>
-  <input type="checkbox" id="e9">Psoriasis<br>
-  <input type="checkbox" id="e10">Rosacea<br>
-  <input type="checkbox" id="e11">Shingles<br>
-  <input type="checkbox" id="e12">Varicose Veins<br>
-  <input type="checkbox" id="e13">Wrinkles<br>
-  <input type="checkbox" id="e14">Birthmarks<br>
-  <input type="checkbox" id="e15">Chemical Peels<br>
-  <input type="checkbox" id="e16">Cysts<br>
-  <input type="checkbox" id="e17">Dermatitis<br>
-  <input type="checkbox" id="e18">Fillers<br>
-  <input type="checkbox" id="e19">Laser Hair Removal<br>
-  <input type="checkbox" id="e20">Microdermabrasion<br>
-  <input type="checkbox" id="e21">Poison Ivy<br>
-  <input type="checkbox" id="e22">Rashes<br>
-  <input type="checkbox" id="e23">Scars<br>
-  <input type="checkbox" id="e24">Skin Cancers<br>
-  <input type="checkbox" id="e25">Warts<br>
+  <label><input type="checkbox" name="dermCheck" id="e1">Acne</label><br>
+  <label><input type="checkbox" name="dermCheck" id="e2">Boils</label><br>
+  <label><input type="checkbox" name="dermCheck" id="e3">Chicken Pox</label><br>
+  <label><input type="checkbox" name="dermCheck" id="e4">Dermabrasion</label><br>
+  <label><input type="checkbox" name="dermCheck" id="e5">Eczema</label><br>
+  <label><input type="checkbox" name="dermCheck" id="e6">Hair Infections</label><br>
+  <label><input type="checkbox" name="dermCheck" id="e7">Laser Skin Treatment</label><br>
+  <label><input type="checkbox" name="dermCheck" id="e8">Moles</label><br>
+  <label><input type="checkbox" name="dermCheck" id="e9">Psoriasis</label><br>
+  <label><input type="checkbox" name="dermCheck" id="e10">Rosacea</label><br>
+  <label><input type="checkbox" name="dermCheck" id="e11">Shingles</label><br>
+  <label><input type="checkbox" name="dermCheck" id="e12">Varicose Veins</label><br>
+  <label><input type="checkbox" name="dermCheck" id="e13">Wrinkles</label><br>
+  <label><input type="checkbox" name="dermCheck" id="e14">Birthmarks</label><br>
+  <label><input type="checkbox" name="dermCheck" id="e15">Chemical Peels</label><br>
+  <label><input type="checkbox" name="dermCheck" id="e16">Cysts</label><br>
+  <label><input type="checkbox" name="dermCheck" id="e17">Dermatitis</label><br>
+  <label><input type="checkbox" name="dermCheck" id="e18">Fillers</label><br>
+  <label><input type="checkbox" name="dermCheck" id="e19">Laser Hair Removal</label><br>
+  <label><input type="checkbox" name="dermCheck" id="e20">Microdermabrasion</label><br>
+  <label><input type="checkbox" name="dermCheck" id="e21">Poison Ivy</label><br>
+  <label><input type="checkbox" name="dermCheck" id="e22">Rashes</label><br>
+  <label><input type="checkbox" name="dermCheck" id="e23">Scars</label><br>
+  <label><input type="checkbox" name="dermCheck" id="e24">Skin Cancers</label><br>
+  <label><input type="checkbox" name="dermCheck" id="e25">Warts</label><br>
 
+  <br>
+  <label><input type="checkbox" id="dermOldEditor">Old Editor</label>
+  <br>
   <button type="button" onclick="dermLinks()">Generate</button>
   <button type="button" onclick="checkAllDerm()">Select All</button>
   <button type="button" onclick="checkNoneDerm()">Select None</button>
