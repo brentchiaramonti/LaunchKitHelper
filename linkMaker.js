@@ -1,5 +1,6 @@
 var xhttp;
 xhttp = new XMLHttpRequest();
+
 xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
         populateWebpage(this);
@@ -10,8 +11,11 @@ xhttp.send();
 
 function populateWebpage(xml){
 	var x, i, txt, xmlDoc, title, name;
-	xmlDoc = xml.responseXML;
-	console.log(xml);
+
+	var parser = new DOMParser();
+    xmlDoc = parser.parseFromString(xml.responseText, "application/xml");
+	console.log(xml.responseText);
+	console.log(xmlDoc);
 	txt = "";
 	title = xmlDoc.getElementsByTagName("title");
 	name = title + "Links"

@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
+<linkList>
 <title>Dental</title>
 <item>
 	<text>Veneers</text>
@@ -25,3 +26,4 @@
 	<url>articles/patient_education/502446-veneers</url>
 	<additional></additional>
 </item>
+</linkList>
