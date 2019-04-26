@@ -11,17 +11,19 @@ xhttp.send();
 
 function populateWebpage(xml){
 	var x, i, txt, xmlDoc, title, name;
-
+	console.log(xml);
 	var parser = new DOMParser();
-    xmlDoc = parser.parseFromString(xml.responseText, "application/xml");
+    xmlDoc = parser.parseFromString(xml.response, "text/xml");
 	console.log(xml.responseText);
 	console.log(xmlDoc);
 	txt = "";
-	title = xmlDoc.getElementsByTagName("title");
+	title = xmlDoc.getElementsByTagName("item")[0].childNodes[3].nodeName;
+	console.log(title)
 	name = title + "Links"
 	items = xmlDoc.getElementsByTagName("item");
 	for(i = 0; i < items.length; i++){
-		txt += "<label><input type=\"checkbox\" name=\"" + name + "\">" + items[i].childNodes[0].nodeValue + "</label><br>";
+		console.log(items[i])
+		txt += "<label><input type=\"checkbox\" name=\"" + name + "\">" + items[i].childNodes[1].nodeValue + "</label><br>";
 	}
 	document.getElementById("checkboxes").innerHTML = txt;
 }
