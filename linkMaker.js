@@ -13,15 +13,28 @@ function populateWebpage(xml){
 	var x, i, txt, xmlDoc, title, name, xmlFormated;
 	console.log(xml);
 
+	var dict = {};
+
+	var text, url, additional
 
 	var parser = new DOMParser();
     xmlDoc = parser.parseFromString(xml.responseText, "text/xml");
 	txt = "";
-	title = xmlDoc.getElementsByTagName("item")[0].childNodes[1].childNodes[0].nodeValue;
+	title = xmlDoc.getElementsByTagName("linkList")[0].getAttribute("title");
 	name = title + "Links"
 	items = xmlDoc.getElementsByTagName("item");
 	for(i = 0; i < items.length; i++){
-		txt += "<label><input type=\"checkbox\" name=\"" + name + "\">" + items[i].childNodes[1].firstChild.nodeValue + "</label><br>";
+		text = items[i].childNodes[1].firstChild.nodeValue;
+		url = items[i].childNodes[4].firstChild.nodeValue;
+		additional = items[i].childNodes[7].firstChild.nodeValue;
+		txt += "<label><input type=\"checkbox\" name=\"" + name + "\">" + text + "</label><br>";
 	}
 	document.getElementById("checkboxes").innerHTML = txt;
+
+	document.getElementById("generate").onclick = generateLinks()
+}
+
+
+function generateLinks(name, dictionary) {
+
 }
