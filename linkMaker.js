@@ -78,3 +78,9 @@ function selectNone(name){
 		checkboxes[i].checked = false;
 	}
 }
+
+function copyText(){
+	var el = document.getElementById("output");
+	el.select();
+	document.execCommand('copy');
+}
