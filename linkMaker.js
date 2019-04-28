@@ -46,10 +46,10 @@ function generateLinks(name, dict) {
 	var checkboxes = document.getElementsByName(name);
 	var output = document.getElementById("output");
 	var checkboxName;
+	console.log(dict);
 	for(var i = 0; i < checkboxes.length; i++){
 		if(checkboxes[i].checked){
 			checkboxName = cleanText(checkboxes[i].parentElement.innerHTML);
-			console.log(dict[checkboxName]);
 			var url = dict[checkboxName]["url"];
 			var additional = dict[checkboxName]["additional"];
 			output.innerHTML = output.innerHTML + makeLink(checkboxName, url, additional);
